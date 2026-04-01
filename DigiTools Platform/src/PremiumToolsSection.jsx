@@ -1,6 +1,6 @@
 import ProductCard from './ProductCard'
 
-const toolsData = [
+const cards = [
   {
     icon: "/products/operation.png",
     title: 'AI Writing Pro',
@@ -79,8 +79,8 @@ const PremiumToolsSection = () => {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {toolsData.map((tool) => (
-            <ProductCard key={tool.title} product={tool} />
+          {cards.map((card) => (
+            <ProductCard key={card.title} product={card} />
           ))}
         </div>
       </div>

@@ -1,8 +1,10 @@
 
 import './App.css'
+import GetStartedSection from './GetStartedSection'
 import Hero from './Hero'
 import Navbar from './Navbar'
 import PremiumToolsSection from './PremiumToolsSection'
+import PricingSection from './PricingSection'
 import StatsBar from './StatsBar'
 
 function App() {
@@ -12,7 +14,10 @@ function App() {
       <Navbar />
       <Hero />
       <StatsBar />
+      
       <PremiumToolsSection />
+      <GetStartedSection />
+      <PricingSection />
     </div>
   )
 }
