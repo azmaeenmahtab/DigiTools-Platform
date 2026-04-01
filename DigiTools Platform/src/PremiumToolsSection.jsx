@@ -93,7 +93,7 @@ const PremiumToolsSection = ({ onCartCountChange = () => {} }) => {
     <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto w-full max-w-6xl">
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-[#1F2637] sm:text-5xl">Premium Digital Tools</h2>
+          <h2 className="text-3xl font-bold text-[#1F2637] sm:text-4xl lg:text-5xl">Premium Digital Tools</h2>
           <p className="mx-auto mt-3 max-w-3xl text-sm text-[#7C859C] sm:text-base">
             Choose from our curated collection of premium digital products designed to supercharge your workflow,
             boost your productivity, and elevate your creative process.
@@ -151,21 +151,21 @@ const PremiumToolsSection = ({ onCartCountChange = () => {} }) => {
               <>
                 <div className="mt-6 space-y-3">
                   {cartItems.map((item) => (
-                    <div key={item.title} className="flex items-center justify-between rounded-xl bg-[#F4F5FA] p-4">
-                      <div className="flex items-center gap-4">
+                    <div key={item.title} className="flex flex-col gap-3 rounded-xl bg-[#F4F5FA] p-4 sm:flex-row sm:items-center sm:justify-between">
+                      <div className="flex items-center gap-3 sm:gap-4">
                         <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white">
                           <img src={item.icon} alt={item.title} className="h-7 w-7 object-contain" />
                         </span>
                         <div>
-                          <p className="text-2xl font-semibold text-[#1F2637]">{item.title}</p>
-                          <p className="mt-1 text-base text-[#7C859C]">{item.price}</p>
+                          <p className="text-lg font-semibold text-[#1F2637] sm:text-2xl">{item.title}</p>
+                          <p className="mt-1 text-sm text-[#7C859C] sm:text-base">{item.price}</p>
                         </div>
                       </div>
 
                       <button
                         type="button"
                         onClick={() => removeFromCart(item.title)}
-                        className="text-sm font-semibold text-[#FF4B8B]"
+                        className="self-end text-sm font-semibold text-[#FF4B8B] sm:self-auto"
                       >
                         Remove
                       </button>
@@ -175,7 +175,7 @@ const PremiumToolsSection = ({ onCartCountChange = () => {} }) => {
 
                 <div className="mt-5 flex items-center justify-between">
                   <p className="text-base text-[#8A93A8]">Total:</p>
-                  <p className="text-4xl font-semibold text-[#1F2637]">${cartTotal}</p>
+                  <p className="text-2xl font-semibold text-[#1F2637] sm:text-4xl">${cartTotal}</p>
                 </div>
 
                 <button

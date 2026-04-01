@@ -9,8 +9,8 @@ const StepCard = ({ step, icon, title, description }) => {
         <img src={icon} alt={title} className="h-8 w-8 object-contain" />
       </div>
 
-      <h3 className="mt-5 text-3xl font-semibold text-[#1F2637]">{title}</h3>
-      <p className="mx-auto mt-3 max-w-70 text-base leading-7 text-[#7C859C]">{description}</p>
+      <h3 className="mt-5 text-2xl font-semibold text-[#1F2637] sm:text-3xl">{title}</h3>
+      <p className="mx-auto mt-3 max-w-70 text-sm leading-7 text-[#7C859C] sm:text-base">{description}</p>
     </article>
   )
 }

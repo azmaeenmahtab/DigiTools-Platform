@@ -6,8 +6,8 @@ const FooterSection = () => {
   return (
     <footer className="bg-[#071634] px-4 pb-6 pt-14 sm:px-6 lg:px-8">
       <div className="mx-auto w-full max-w-6xl">
-        <div className="grid grid-cols-1 gap-10 border-b border-white/15 pb-10 md:grid-cols-6">
-          <div className="md:col-span-2">
+        <div className="grid grid-cols-1 gap-10 border-b border-white/15 pb-10 sm:grid-cols-2 md:grid-cols-6">
+          <div className="sm:col-span-2 md:col-span-2">
             <img src="/DigiToolswhitelogo.png" alt="DigiTools" className="h-10 w-auto" />
             <p className="mt-4 max-w-xs text-sm leading-7 text-[#AEB8CD]">
               Premium digital tools for creators, professionals, and businesses. Work smarter with our suite of powerful tools.
@@ -66,8 +66,8 @@ const FooterSection = () => {
         </div>
 
         <div className="flex flex-col items-start justify-between gap-4 pt-5 text-sm text-[#7E8AA8] sm:flex-row sm:items-center">
-          <p>@ 2026 DigiTools. All rights reserved.</p>
-          <div className="flex items-center gap-6">
+          <p className="text-xs sm:text-sm">@ 2026 DigiTools. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm">
             <span>Privacy Policy</span>
             <span>Terms of Service</span>
             <span>Cookies</span>

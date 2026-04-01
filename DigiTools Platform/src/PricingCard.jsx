@@ -15,19 +15,19 @@ const PricingCard = ({ plan, index }) => {
         </span>
       )}
 
-      <h3 className={`text-4xl font-semibold ${isFeatured ? 'text-white' : 'text-[#1F2637]'}`}>{plan.name}</h3>
-      <p className={`mt-2 text-base ${isFeatured ? 'text-white/85' : 'text-[#7C859C]'}`}>{plan.subtitle}</p>
+      <h3 className={`text-3xl font-semibold sm:text-4xl ${isFeatured ? 'text-white' : 'text-[#1F2637]'}`}>{plan.name}</h3>
+      <p className={`mt-2 text-sm sm:text-base ${isFeatured ? 'text-white/85' : 'text-[#7C859C]'}`}>{plan.subtitle}</p>
 
       <div className="mt-5 flex items-end gap-1">
-        <p className={`text-6xl font-bold leading-none ${isFeatured ? 'text-white' : 'text-[#1B2235]'}`}>{plan.price}</p>
-        <p className={`pb-2 text-2xl ${isFeatured ? 'text-white/85' : 'text-[#8C94A9]'}`}>/Month</p>
+        <p className={`text-5xl font-bold leading-none sm:text-6xl ${isFeatured ? 'text-white' : 'text-[#1B2235]'}`}>{plan.price}</p>
+        <p className={`pb-1 text-xl sm:pb-2 sm:text-2xl ${isFeatured ? 'text-white/85' : 'text-[#8C94A9]'}`}>/Month</p>
       </div>
 
       <ul className="my-6 space-y-3">
         {plan.features.map((feature) => (
           <li
             key={feature}
-            className={`flex items-start gap-3 text-base leading-6 ${isFeatured ? 'text-white/95' : 'text-[#56617A]'}`}
+            className={`flex items-start gap-3 text-sm leading-6 sm:text-base ${isFeatured ? 'text-white/95' : 'text-[#56617A]'}`}
           >
             <img src="/Check.png" alt="Check" className="mt-1 h-4 w-4 shrink-0 object-contain" />
             <span>{feature}</span>

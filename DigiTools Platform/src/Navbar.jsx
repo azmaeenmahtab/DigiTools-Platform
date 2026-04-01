@@ -24,7 +24,7 @@ const Navbar = ({ cartCount = 0 }) => {
           </div>
 
           <a href="#" className="inline-flex items-center">
-            <img src="/DigiTools.png" alt="DigiTools" className="h-11 w-auto" />
+            <img src="/DigiTools.png" alt="DigiTools" className="h-9 w-auto sm:h-11" />
           </a>
         </div>
 
@@ -40,7 +40,7 @@ const Navbar = ({ cartCount = 0 }) => {
           </ul>
         </div>
 
-        <div className="navbar-end gap-3">
+        <div className="navbar-end gap-2 sm:gap-3">
           <button className="btn btn-ghost relative hidden min-h-0 h-9 w-9 rounded-full p-0 text-[#111827] hover:bg-transparent lg:inline-flex" aria-label="Cart">
             <img src="/shopping-cart-01.png" alt="Cart" className="h-4 w-4" />
             {cartCount > 0 && (
@@ -56,7 +56,7 @@ const Navbar = ({ cartCount = 0 }) => {
 
           <a
             href="#"
-            className="inline-flex h-11 items-center rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] px-6 text-[17px] font-semibold text-white shadow-[0_8px_20px_rgba(79,57,246,0.25)] transition-transform hover:scale-[1.02]"
+            className="inline-flex h-10 items-center rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] px-4 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(79,57,246,0.25)] transition-transform hover:scale-[1.02] sm:h-11 sm:px-6 sm:text-[17px]"
           >
             Get Started
           </a>
