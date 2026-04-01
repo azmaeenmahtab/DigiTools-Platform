@@ -29,7 +29,7 @@ const PricingCard = ({ plan, index }) => {
             key={feature}
             className={`flex items-start gap-3 text-base leading-6 ${isFeatured ? 'text-white/95' : 'text-[#56617A]'}`}
           >
-            <span className={`mt-1 text-base font-semibold ${isFeatured ? 'text-white' : 'text-[#2FBF71]'}`}>✓</span>
+            <img src="/Check.png" alt="Check" className="mt-1 h-4 w-4 shrink-0 object-contain" />
             <span>{feature}</span>
           </li>
         ))}

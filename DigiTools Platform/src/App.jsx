@@ -6,6 +6,7 @@ import Navbar from './Navbar'
 import PremiumToolsSection from './PremiumToolsSection'
 import PricingSection from './PricingSection'
 import StatsBar from './StatsBar'
+import TransformWorkflowSection from './TransformWorkflowSection'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <PremiumToolsSection />
       <GetStartedSection />
       <PricingSection />
+      <TransformWorkflowSection />
     </div>
   )
 }
