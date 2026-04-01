@@ -1,6 +1,6 @@
 const navLinks = ['Products', 'Features', 'Pricing', 'Testimonials', 'FAQ']
 
-const Navbar = () => {
+const Navbar = ({ cartCount = 0 }) => {
   return (
     <header className="w-full border-b border-gray-200 bg-white">
       <div className="navbar mx-auto min-h-20 w-full max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -41,8 +41,13 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end gap-3">
-          <button className="btn btn-ghost hidden min-h-0 h-9 w-9 rounded-full p-0 text-[#111827] hover:bg-transparent lg:inline-flex" aria-label="Cart">
+          <button className="btn btn-ghost relative hidden min-h-0 h-9 w-9 rounded-full p-0 text-[#111827] hover:bg-transparent lg:inline-flex" aria-label="Cart">
             <img src="/shopping-cart-01.png" alt="Cart" className="h-4 w-4" />
+            {cartCount > 0 && (
+              <span className="absolute -right-1 -top-1 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-[#FF4B8B] px-1 text-[10px] font-semibold leading-none text-white">
+                {cartCount}
+              </span>
+            )}
           </button>
 
           <a href="#" className="hidden text-[17px] font-medium text-[#111827] transition-colors hover:text-[#4F39F6] lg:inline-flex">

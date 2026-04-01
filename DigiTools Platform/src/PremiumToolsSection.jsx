@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { toast } from 'react-toastify'
 import ProductCard from './ProductCard'
 
 const cards = [
@@ -58,21 +59,32 @@ const cards = [
   },
 ]
 
-const PremiumToolsSection = () => {
+const PremiumToolsSection = ({ onCartCountChange = () => {} }) => {
   const [activeTab, setActiveTab] = useState('products')
   const [cartItems, setCartItems] = useState([])
 
+  useEffect(() => {
+    onCartCountChange(cartItems.length)
+  }, [cartItems.length, onCartCountChange])
+
   const addToCart = (product) => {
-    setCartItems((prevItems) => {
-      if (prevItems.some((item) => item.title === product.title)) {
-        return prevItems
-      }
-      return [...prevItems, product]
-    })
+    if (cartItems.some((item) => item.title === product.title)) {
+      return
+    }
+
+    setCartItems((prevItems) => [...prevItems, product])
+    toast.success(`${product.title} added to cart`)
   }
 
   const removeFromCart = (title) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.title !== title))
+    toast.info(`${title} removed from cart`)
+  }
+
+  const handleCheckout = () => {
+    setCartItems([])
+    setActiveTab('products')
+    toast.success('Checkout complete. Cart cleared!')
   }
 
   const cartTotal = cartItems.reduce((sum, item) => sum + Number(item.price.replace('$', '')), 0)
@@ -168,6 +180,7 @@ const PremiumToolsSection = () => {
 
                 <button
                   type="button"
+                  onClick={handleCheckout}
                   className="mt-5 inline-flex h-12 w-full items-center justify-center rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-base font-semibold text-white"
                 >
                   Proceed To Checkout
