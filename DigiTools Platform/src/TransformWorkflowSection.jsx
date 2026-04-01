@@ -1,6 +1,6 @@
 const TransformWorkflowSection = () => {
   return (
-    <section className="bg-white pb-16">
+    <section className="bg-white  ">
       <div className="w-full bg-linear-to-r from-[#4D33F5] to-[#9D14FB] px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto w-full max-w-4xl text-center text-white">
           <h2 className="text-5xl font-bold leading-tight sm:text-6xl">Ready To Transform Your Workflow?</h2>

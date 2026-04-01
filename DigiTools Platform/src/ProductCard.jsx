@@ -1,4 +1,4 @@
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, isInCart, onAddToCart }) => {
   const isImageIcon = typeof product.icon === 'string'
 
   return (
@@ -27,7 +27,7 @@ const ProductCard = ({ product }) => {
       <ul className="mt-3 space-y-1.5 text-sm text-[#677088]">
         {product.highlights.map((point) => (
           <li key={point} className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#3DCB79]" />
+            <img src="/Check.png" alt="Check" className="h-4 w-4 shrink-0 object-contain" />
             {point}
           </li>
         ))}
@@ -35,9 +35,15 @@ const ProductCard = ({ product }) => {
 
       <button
         type="button"
-        className="mt-5 inline-flex h-10 w-full items-center justify-center rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-sm font-semibold text-white"
+        onClick={() => onAddToCart(product)}
+        disabled={isInCart}
+        className={`mt-5 inline-flex h-10 w-full items-center justify-center rounded-full text-sm font-semibold text-white ${
+          isInCart
+            ? 'cursor-not-allowed bg-[#2FBF71]'
+            : 'bg-linear-to-r from-[#4F39F6] to-[#9514FA]'
+        }`}
       >
-        Buy Now
+        {isInCart ? 'Added to Cart' : 'Buy Now'}
       </button>
     </article>
   )
