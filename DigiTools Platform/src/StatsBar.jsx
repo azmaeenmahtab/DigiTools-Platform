@@ -11,8 +11,8 @@ const StatsBar = () => {
         <div className="mx-auto grid w-full max-w-6xl grid-cols-1 divide-y divide-white/20 px-6 py-12 text-white sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:px-10 lg:px-14">
           {stats.map((item) => (
             <div key={item.label} className="flex flex-col items-center justify-center gap-2 py-2">
-              <p className="text-5xl font-bold tracking-tight">{item.value}</p>
-              <p className="text-xl font-medium text-white/75">{item.label}</p>
+              <p className="text-4xl font-semibold tracking-tight">{item.value}</p>
+              <p className="text-lg font-normal text-white/75">{item.label}</p>
             </div>
           ))}
         </div>
