@@ -1,5 +1,6 @@
 
 import './App.css'
+import FooterSection from './FooterSection'
 import GetStartedSection from './GetStartedSection'
 import Hero from './Hero'
 import Navbar from './Navbar'
@@ -20,6 +21,7 @@ function App() {
       <GetStartedSection />
       <PricingSection />
       <TransformWorkflowSection />
+      <FooterSection />
     </div>
   )
 }
